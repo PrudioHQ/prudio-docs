@@ -11,3 +11,19 @@ This is a product being built by the Assembly community. You can help push this 
 Assembly products are like open-source and made with contributions from the community. Assembly handles the boring stuff like hosting, support, financing, legal, etc. Once the product launches we collect the revenue and split the profits amongst the contributors.
 
 Visit [https://assembly.com](https://assembly.com) to learn more.
+
+## How to edit the documentation
+
+To build and publish the documentation we use [mkdocs](http://www.mkdocs.org/). So the first step is to install it:
+
+    pip install -r requirements.txt
+
+Then to preview your changes locally, run the following command:
+
+    mkdocs serve
+
+Once everything is done, you can publish to the Github Pages of your forked repository to do a final check:
+
+    mkdocs gh-deploy
+
+Finally submit your pull-request.
