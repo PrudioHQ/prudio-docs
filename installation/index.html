@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-        <title>About - Prudio Documentation</title>
+        <title>Installation - Prudio Documentation</title>
 
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -48,14 +48,14 @@
             <ul class="nav navbar-nav">
             
             
-                <li >
-                    <a href="../installation">Installation</a>
+                <li class="active">
+                    <a href=".">Installation</a>
                 </li>
             
             
             
-                <li class="active">
-                    <a href=".">About</a>
+                <li >
+                    <a href="../about">About</a>
                 </li>
             
             
@@ -65,12 +65,12 @@
             <ul class="nav navbar-nav navbar-right">
                 
                 <li >
-                    <a rel="next" href="../installation">
+                    <a rel="next" href="..">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                <li class="disabled">
-                    <a rel="prev" >
+                <li >
+                    <a rel="prev" href="../about">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -84,16 +84,77 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#about-prudio">About Prudio</a></li>
+        <li class="main active"><a href="#widget-installation">Widget Installation</a></li>
+        
+            <li><a href="#install">Install</a></li>
+        
+            <li><a href="#options">Options</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="about-prudio">About <em>Prudio</em></h1>
-<p>Prudio is the easiest way to engage your website visitors through Slack.</p>
-<p>Checkout our team at <a href="https://www.assembly.com/prudio">assembly.com/prudio</a>.</p>
+<h1 id="widget-installation">Widget Installation</h1>
+<h2 id="install">Install</h2>
+<p>To install the code snippet please refer to the <em>Prudio</em> <a href="https://app.prud.io">administration</a>.</p>
+<p>There you can create and find your applications.</p>
+<p>Copy the following code and paste it inside your <code>&lt;body&gt;</code> tag.</p>
+<p>Simple example:</p>
+<pre><code class="html">&lt;script src=&quot;https://chat.prud.io/client.js?appid=YOURAPPID&quot; async&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Don&#8217;t forget to change the <code>YOURAPPID</code> for your own code.</p>
+<h2 id="options">Options</h2>
+<h3 id="identify-your-users">Identify your users</h3>
+<p>Use the configurations to give a brief insight of your users.</p>
+<p>For example, if your user is already authenticated in you web app you don&#8217;t need
+to ask for the name and e-mail again.</p>
+<p>Check this example:</p>
+<pre><code class="html">&lt;script src=&quot;https://chat.prud.io/client.js?appid=YOURAPPID&quot; async&gt;&lt;/script&gt;
+&lt;script&gt;
+
+    window._PrudioSettings = {
+        name: 'John Doe',
+        email: 'john.doe@example.com'
+    };
+
+&lt;/script&gt;
+</code></pre>
+
+<p>Simple example using <strong>PHP</strong>:</p>
+<pre><code>&lt;script src=&quot;https://chat.prud.io/client.js?appid=YOURAPPID&quot; async&gt;&lt;/script&gt;
+&lt;script&gt;
+
+    window._PrudioSettings = {
+        name: '&lt;?php echo $user-&gt;name; ?&gt;',
+        email: '&lt;?php echo $user-&gt;email; ?&gt;'
+    };
+
+&lt;/script&gt;
+</code></pre>
+
+<h3 id="personalize-your-widget">Personalize your widget</h3>
+<pre><code class="html">&lt;script src=&quot;https://chat.prud.io/client.js?appid=YOURAPPID&quot; async&gt;&lt;/script&gt;
+&lt;script&gt;
+
+    window._PrudioSettings = {
+        icon: '', // check the available icon bellow
+        buttonColor: '', // color of the default button
+        buttonSelector: '' // the jQuery like selector .class or #id
+    };
+
+&lt;/script&gt;
+</code></pre>
+
+<p><strong>Available icons:</strong></p>
+<ul>
+<li>icon-btn-bubble</li>
+<li>icon-btn-chat</li>
+<li>icon-btn-prudio</li>
+<li>icon-btn-chats</li>
+<li>icon-btn-help</li>
+</ul>
 </div>
         </div>
 
