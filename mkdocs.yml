@@ -2,6 +2,9 @@ site_name: Prudio Documentation
 
 pages:
 - [index.md, Home]
+- [installation.md, Installation]
 - [about.md, About]
 
 theme: cerulean
+
+markdown_extensions: [smartypants]
