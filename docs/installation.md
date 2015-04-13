@@ -11,7 +11,7 @@ Copy the following code and paste it inside your `<body>` tag.
 Simple example:
 
 ```html
-<script src="https://chat.prud.io/client.js?appid=YOURAPPID" async></script>
+<script src="https://static.prud.io/client.js?appid=YOURAPPID" async></script>
 ```
 
 Don't forget to change the `YOURAPPID` for your own code.
@@ -28,7 +28,7 @@ to ask for the name and e-mail again.
 Check this example:
 
 ```html
-<script src="https://chat.prud.io/client.js?appid=YOURAPPID" async></script>
+<script src="https://static.prud.io/client.js?appid=YOURAPPID" async></script>
 <script>
 
     window._PrudioSettings = {
@@ -42,7 +42,7 @@ Check this example:
 Simple example using **PHP**:
 
 ```
-<script src="https://chat.prud.io/client.js?appid=YOURAPPID" async></script>
+<script src="https://static.prud.io/client.js?appid=YOURAPPID" async></script>
 <script>
 
     window._PrudioSettings = {
@@ -56,7 +56,7 @@ Simple example using **PHP**:
 ### Personalize your widget
 
 ```html
-<script src="https://chat.prud.io/client.js?appid=YOURAPPID" async></script>
+<script src="https://static.prud.io/client.js?appid=YOURAPPID" async></script>
 <script>
 
     window._PrudioSettings = {
