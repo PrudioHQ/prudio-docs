@@ -53,15 +53,17 @@ Simple example using **PHP**:
 </script>
 ```
 
-### Personalize your widget
+## Personalize your widget
 
 ```html
 <script src="https://static.prud.io/client.js?appid=YOURAPPID" async></script>
 <script>
 
     window._PrudioSettings = {
-        icon: '', // check the available icon bellow
-        buttonColor: '', // color of the default button
+        title: '', // Title of the window (on the top)
+        icon: '', // Check the available icon bellow
+        buttonColor: '', // Color of the default button
+        borderColor: '', // Color of the button border
         buttonSelector: '' // the jQuery like selector .class or #id
     };
 
@@ -70,8 +72,8 @@ Simple example using **PHP**:
 
 **Available icons:**
 
-* icon-btn-bubble
-* icon-btn-chat
-* icon-btn-prudio
-* icon-btn-chats
-* icon-btn-help
+* prd-icon-btn-bubble
+* prd-icon-btn-chat
+* prd-icon-btn-prudio
+* prd-icon-btn-chats
+* prd-icon-btn-help
