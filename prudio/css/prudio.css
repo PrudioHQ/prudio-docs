@@ -12,6 +12,10 @@ a {
     color: #2c3e50;
 }
 
+.content {
+    min-height: 60vh;
+}
+
 .navbar {
     background: #FFF;
     border: none;
