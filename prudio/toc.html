@@ -1,0 +1,37 @@
+<div class="bs-sidebar hidden-print affix" role="complementary" data-spy="affix" data-offset-top="120">
+    <!-- Expanded navigation -->
+    <div class="navbar-collapse collapse">
+
+        <!-- Main navigation -->
+        <ul class="nav bs-sidenav">
+        {% for nav_item in nav %}
+        {% if nav_item.children %}
+            <li class="main {% if nav_item.active %}active{% endif %}"><a href="{{ nav_item.url }}">{{ nav_item.title }}</a></li>
+
+            {% for nav_item in nav_item.children %}
+                <li><a href="{{ nav_item.url }}">&nbsp;&nbsp;&nbsp;{{ nav_item.title }}</a></li>
+            {% endfor %}
+        {% else %}
+            <li class="main {% if nav_item.active %}active{% endif %}"><a href="{{ nav_item.url }}">{{ nav_item.title }}</a></li>
+            {% if nav_item == current_page %}
+            {% for toc_item in toc %}
+                <li><a class="toc" href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+                {% for toc_item in toc_item.children %}
+                <li><a class="toc" href="{{ toc_item.url }}">{{ toc_item.title }}</a></li>
+                {% endfor %}
+            {% endfor %}
+            {% endif %}
+        {% endif %}
+        {% endfor %}
+        </ul>
+
+        <!-- Search, Navigation and Repo links -->
+        <ul class="nav navbar-nav navbar-right">
+            {% if include_search %}
+            <li>
+                <a href="#searchModal" data-toggle="modal"><i class="fa fa-search"></i> Search</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>

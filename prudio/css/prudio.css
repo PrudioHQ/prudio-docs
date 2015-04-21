@@ -1,0 +1,58 @@
+body {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    padding-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+    color: #2c3e50;
+}
+
+a {
+    color: #2c3e50;
+}
+
+.navbar {
+    background: #FFF;
+    border: none;
+    padding: 10px 60px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.25);
+    position: relative;
+}
+
+.navbar-default .navbar-brand {
+    color: #317eac;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #317eac;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 20px 15px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #2c3e50;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+    margin-top: 10px;
+    color: #BBB;
+}
+
+.toc {
+    margin-left: 12px;
+}
+
+.footer {
+    color: #ccc;
+    padding: 25px 0;
+}
+
+.footer a {
+    color: #ccc;
+}

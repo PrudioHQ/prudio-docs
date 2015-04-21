@@ -3,8 +3,9 @@ site_name: Prudio Documentation
 pages:
 - [index.md, Home]
 - [installation.md, Installation]
-- [about.md, About]
+- ['about.md', About]
 
-theme: cerulean
-
-markdown_extensions: [smartypants]
+theme_dir: prudio
+favicon: img/favicon.ico
+repo_url: https://github.com/asm-products/prudio-docs
+repo_name: GitHub
