@@ -55,7 +55,7 @@ Simple example using **PHP**:
 
 ## Personalize your widget
 
-Prudio comes with a good default configuration that meets the needs of many of its deployments. However we know that each use case has his own special demands, this way we give you the chance to configure and adapt the widget to your website look and feel. Bellow are some of the settings available:
+Prudio comes with a good default configuration that meets the needs of many of its deployments. However we know that each use case has its own special demands, this way we give you the chance to configure and adapt the widget to your website look and feel. Bellow are some of the settings available:
 
 ```html
 <script src="https://static.prud.io/client.js?appid=YOURAPPID" async></script>
