@@ -61,9 +61,10 @@ Simple example using **PHP**:
 
     window._PrudioSettings = {
         title: '', // Title of the window (on the top)
-        icon: '', // Check the available icon bellow
-        buttonColor: '', // Color of the default button
-        borderColor: '', // Color of the button border
+        icon: '', // Check the available icon bellow (default: prd-icon-btn-help)
+        buttonColor: '', // Color of the default button (default: rgba(0, 114, 176, 0.9))
+        borderColor: '', // Color of the button border (default: rgba(0, 114, 176, 1))
+        iconColor: '', // Color of the icon (default: white)
         buttonSelector: '' // the jQuery like selector .class or #id
     };
 
@@ -72,8 +73,8 @@ Simple example using **PHP**:
 
 **Available icons:**
 
+* prd-icon-btn-help (*default*)
 * prd-icon-btn-bubble
 * prd-icon-btn-chat
 * prd-icon-btn-prudio
 * prd-icon-btn-chats
-* prd-icon-btn-help
