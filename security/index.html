@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>Installation - Prudio Documentation</title>
+	<title>Security - Prudio Documentation</title>
 
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet" type="text/css">
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
@@ -78,18 +78,7 @@
         
         
         
-            <li class="main active"><a href="./">Installation</a></li>
-            
-            
-                <li><a class="toc" href="#widget-installation">Widget Installation</a></li>
-                
-                <li><a class="toc" href="#install">Install</a></li>
-                
-                <li><a class="toc" href="#options">Options</a></li>
-                
-                <li><a class="toc" href="#personalize-your-widget">Personalize your widget</a></li>
-                
-            
+            <li class="main "><a href="../installation/">Installation</a></li>
             
         
         
@@ -99,7 +88,14 @@
         
         
         
-            <li class="main "><a href="../security/">Security</a></li>
+            <li class="main active"><a href="./">Security</a></li>
+            
+            
+                <li><a class="toc" href="#security">Security</a></li>
+                
+                <li><a class="toc" href="#found-an-issue">Found an issue?</a></li>
+                
+            
             
         
         
@@ -118,71 +114,19 @@
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="widget-installation">Widget Installation</h1>
-<h2 id="install">Install</h2>
-<p>To install the code snippet please refer to the <em>Prudio</em> <a href="https://app.prud.io">administration</a>.</p>
-<p>There you can create and find your applications.</p>
-<p>Copy the following code and paste it inside your <code>&lt;body&gt;</code> tag.</p>
-<p>Simple example:</p>
-<pre><code class="html">&lt;script src=&quot;https://static.prud.io/client.js?appid=YOURAPPID&quot; async&gt;&lt;/script&gt;
-</code></pre>
-
-<p>Don't forget to change the <code>YOURAPPID</code> for your own code.</p>
-<h2 id="options">Options</h2>
-<h3 id="identify-your-users">Identify your users</h3>
-<p>Use the configurations to give a brief insight of your users.</p>
-<p>For example, if your user is already authenticated in you web app you don't need
-to ask for the name and e-mail again.</p>
-<p>Check this example:</p>
-<pre><code class="html">&lt;script src=&quot;https://static.prud.io/client.js?appid=YOURAPPID&quot; async&gt;&lt;/script&gt;
-&lt;script&gt;
-
-    window._PrudioSettings = {
-        name: 'John Doe',
-        email: 'john.doe@example.com'
-    };
-
-&lt;/script&gt;
-</code></pre>
-
-<p>Simple example using <strong>PHP</strong>:</p>
-<pre><code>&lt;script src=&quot;https://static.prud.io/client.js?appid=YOURAPPID&quot; async&gt;&lt;/script&gt;
-&lt;script&gt;
-
-    window._PrudioSettings = {
-        name: '&lt;?php echo $user-&gt;name; ?&gt;',
-        email: '&lt;?php echo $user-&gt;email; ?&gt;'
-    };
-
-&lt;/script&gt;
-</code></pre>
-
-<h2 id="personalize-your-widget">Personalize your widget</h2>
-<p>Prudio comes with a good default configuration that meets the needs of many of its deployments. However we know that each use case has its own special demands, this way we give you the chance to configure and adapt the widget to your website look and feel. Bellow are some of the settings available:</p>
-<pre><code class="html">&lt;script src=&quot;https://static.prud.io/client.js?appid=YOURAPPID&quot; async&gt;&lt;/script&gt;
-&lt;script&gt;
-
-    window._PrudioSettings = {
-        title: '', // Title of the window (on the top)
-        icon: '', // Check the available icon bellow (default: prd-icon-btn-help)
-        buttonColor: '', // Color of the default button (default: rgba(0, 114, 176, 0.9))
-        borderColor: '', // Color of the button border (default: rgba(0, 114, 176, 1))
-        iconColor: '', // Color of the icon (default: white)
-        buttonSelector: '' // the jQuery like selector .class or #id
-    };
-
-&lt;/script&gt;
-</code></pre>
-
-<p>As you can see in the example above, you can change the displayed text (<code>title</code>), the icon of the default button (see bellow the available icons) and the colors (<code>buttonColor</code>, <code>borderColor</code>, <code>iconColor</code>). If it is not enough, you can also specify an element in your own page to trigger the Prudio Widget (<code>buttonSelector</code>) instead of using the default button.</p>
-<p><strong>Available icons:</strong></p>
+<h1 id="security">Security</h1>
+<p>We take security very seriously. That's why we put an extra effort in encrypting all connections.</p>
+<p>All connections are made over HTTPS (Secure HTTP) and WSS (Secure WebSocket).</p>
+<p>We also sign all the requests with a <em>signature</em> composed of a public and private key so you can ensure the request was made from Prudio servers.</p>
+<h2 id="found-an-issue">Found an issue?</h2>
+<p>Submit your finding to hello@prud.io</p>
+<p><strong>Please include:</strong></p>
 <ul>
-<li>prd-icon-btn-help (<em>default</em>)</li>
-<li>prd-icon-btn-bubble</li>
-<li>prd-icon-btn-chat</li>
-<li>prd-icon-btn-prudio</li>
-<li>prd-icon-btn-chats</li>
-</ul></div>
+<li>A summary of the problem you found</li>
+<li>A step-by-step guide to reproduce the issue</li>
+<li>How to identify you for attribution on this page.</li>
+</ul>
+<p>We do not offer money rewards yet but we can offer you an equivalent in app coins from <a href="http://assembly.com/prudio">Assembly.com</a>.</p></div>
         </div>
 
         
