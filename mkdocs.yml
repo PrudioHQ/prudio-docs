@@ -3,6 +3,8 @@ site_name: Prudio Documentation
 pages:
 - [index.md, Home]
 - [installation.md, Installation]
+- [performance.md, Performance & Speed]
+- [security.md, Security]
 - ['about.md', About]
 
 theme_dir: prudio

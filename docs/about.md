@@ -2,4 +2,4 @@
 
 Prudio is the easiest way to engage your website visitors through Slack.
 
-Checkout our team at [assembly.com/prudio](https://www.assembly.com/prudio).
+We have a multi talent team spread around the globe. Make sure you checkout our team at [Assembly.com/prudio](https://www.assembly.com/prudio).
