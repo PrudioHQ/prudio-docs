@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>Performance & Speed - Prudio Documentation</title>
+	<title>Localization - Prudio Documentation</title>
 
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet" type="text/css">
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
@@ -83,21 +83,25 @@
         
         
         
-            <li class="main "><a href="../localization/">Localization</a></li>
+            <li class="main active"><a href="./">Localization</a></li>
+            
+            
+                <li><a class="toc" href="#localization">Localization</a></li>
+                
+                <li><a class="toc" href="#force-a-default-language">Force a default language</a></li>
+                
+                <li><a class="toc" href="#add-a-language">Add a language</a></li>
+                
+                <li><a class="toc" href="#extend-an-existing-language">Extend an existing language</a></li>
+                
+                <li><a class="toc" href="#languages-available">Languages available</a></li>
+                
+            
             
         
         
         
-            <li class="main active"><a href="./">Performance & Speed</a></li>
-            
-            
-                <li><a class="toc" href="#performance-and-speed">Performance and Speed</a></li>
-                
-                <li><a class="toc" href="#asynchronous-loading">Asynchronous Loading</a></li>
-                
-                <li><a class="toc" href="#datacenters">Datacenters</a></li>
-                
-            
+            <li class="main "><a href="../performance/">Performance & Speed</a></li>
             
         
         
@@ -121,44 +125,87 @@
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="performance-and-speed">Performance and Speed</h1>
-<p>We set the goal to be fast and that's why we deliver our content thru a global Content Delivery Network (CDN).</p>
-<p>At Prudio we use <a href="https://www.keycdn.com/?a=5066">KeyCDN</a> as our CDN provider.</p>
-<p>Our data is stored around the globe. The short distance to users will not only reduce latency but also minimize packet loss. All these factors will result in a much better performance.</p>
-<p>Requests are always routed to the nearest available location. If one server is not available, requests are automatically sent to the next available server. The end-user will not notice any change.</p>
-<h2 id="asynchronous-loading">Asynchronous Loading</h2>
-<p>We load our client asynchronous so your page will maintain the same performance has before.</p>
-<h2 id="datacenters">Datacenters</h2>
-<p>Our CDN provider has the following points of presence around the world.</p>
-<h3 id="data-centers-americas">Data Centers Americas</h3>
+<h1 id="localization">Localization</h1>
+<p>We use the navigator preferred language to serve the JS Widget. It's built-in so
+you don't have to worry about it.</p>
+<h2 id="force-a-default-language">Force a default language</h2>
+<p>You can force the display language to be static:</p>
+<pre><code>&lt;script&gt;
+
+    window._PrudioSettings = {
+        language: 'fr'
+    };
+
+&lt;/script&gt;
+</code></pre>
+
+<h2 id="add-a-language">Add a language</h2>
+<p>You can add your own translation with:</p>
+<pre><code>&lt;script&gt;
+
+    window._PrudioSettings = {
+        //...
+        language: 'es_MX',
+        localization: {
+            'es_MX': {
+                CHAT_WITH_US: 'Habla con nosotros',
+                NAME: 'Nombre',
+                EMAIL: 'E-mail',
+                START_CONVERSATION: 'Iniciar una conversación',
+                NEW_MESSAGE: 'Nuevo mensaje',
+                NO_USERS_ONLINE: 'Perdon! Actualmente no hay miembros en línea para ayudarle. Deja un mensaje y trataremos de ponernos en contacto lo antes posible!',
+                CONVERSATION_HISTORY: 'Historial de la conversación',
+                JUST_WRITE: 'Escriba aqui...',
+                PROBLEM_CONNECTING_TO_SERVER: 'Hubo un problema al conectar con el servidor!',
+                ERROR_FILL_ALL_FIELDS: 'Por favor, rellene los campos con un nombre y una dirección de correo electrónico válida.',
+                CONNECTING_TO_SERVER: 'Conectando con el servidor...',
+                SERVER_OFFLINE: 'Servidor está apagado!',
+                USER_IS_TYPING: 'El usuario está escribiendo...',
+                UPLOADING_FILE: 'Enviando fichero',
+                ERROR_UPLOADING_FILE: 'Error al adjuntar fichero!',
+                ATTACH_FILE: 'Adjuntar un fichero',
+                USER_OFFLINE: 'La internet se ha ido',
+                USER_ONLINE: 'Estamos de vuelta!',
+                MUTE: 'Silenciar conversación',
+                CLOSE: 'Cerrar conversación',
+                MINIMIZE: 'Minimizar conversación',
+                TITLE: 'Soporte'
+            }
+        }
+    };
+
+&lt;/script&gt;
+</code></pre>
+
+<h2 id="extend-an-existing-language">Extend an existing language</h2>
+<p>You can extend an existing translation:</p>
+<pre><code>&lt;script&gt;
+
+    window._PrudioSettings = {
+        //...
+        localization: {
+            'es': {
+                NAME: 'Su nombre',
+                EMAIL: 'Su correo',
+            }
+        }
+    };
+
+&lt;/script&gt;
+</code></pre>
+
+<h2 id="languages-available">Languages available</h2>
+<p>Currently we have:</p>
 <ul>
-<li>Atlanta, USA</li>
-<li>Chicago, USA</li>
-<li>Dallas, USA</li>
-<li>Mexico City, Mexico</li>
-<li>Miami, USA</li>
-<li>Los Angeles, USA</li>
-<li>San Jose, USA</li>
-<li>Seattle, USA</li>
-<li>Washington D.C., USA</li>
-</ul>
-<h3 id="data-centers-europe">Data Centers Europe</h3>
-<ul>
-<li>Amsterdam, Netherlands</li>
-<li>Frankfurt, Germany</li>
-<li>London, UK</li>
-<li>Milano, Italy</li>
-<li>Moscow, Russia</li>
-<li>Paris, France</li>
-<li>Stockholm, Sweden</li>
-<li>Valencia, Spain</li>
-</ul>
-<h3 id="data-centers-asia-and-oceania">Data Centers Asia and Oceania</h3>
-<ul>
-<li>Hong Kong, China</li>
-<li>Melbourne, Australia</li>
-<li>Singapore</li>
-<li>Tokyo, Japan</li>
+<li>English (<em>default</em>)</li>
+<li>Portuguese</li>
+<li>Spanish</li>
+<li>Turkish</li>
+<li>French</li>
+<li>German</li>
+<li>Romanian</li>
+<li>Portuguese (Brazil)</li>
+<li>more coming soon...</li>
 </ul></div>
         </div>
 
