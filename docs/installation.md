@@ -82,3 +82,7 @@ As you can see in the example above, you can change the displayed text (`title`)
 * prd-icon-btn-chat
 * prd-icon-btn-prudio
 * prd-icon-btn-chats
+
+## Language
+
+Please check the [documentation on localization](/localization/).
