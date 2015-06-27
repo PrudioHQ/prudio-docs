@@ -1,6 +1,7 @@
 body {
     font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
     padding-top: 0;
+    font-size: 17px;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -10,6 +11,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 a {
     color: #2c3e50;
+}
+
+p {
+    margin: 20px 0 20px 0;
 }
 
 .content {
@@ -55,6 +60,7 @@ a {
 .footer {
     color: #ccc;
     padding: 25px 0;
+    font-size: 14px;
 }
 
 .footer a {

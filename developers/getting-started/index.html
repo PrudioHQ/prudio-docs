@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Getting Started - Prudio Documentation</title>
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet" type="text/css">
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link href="../../css/prudio.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">
+                <img src="../../img/prudio-logo.png" alt="Prudio Documentation" height="50" valign="middle" />
+                Prudio Documentation
+            </a>
+        </div>
+
+
+        <!-- Expanded navigation -->
+       <div class="navbar-collapse collapse">
+
+           <ul class="nav navbar-nav navbar-right">
+               <li>
+                   <a href="http://www.prud.io">
+                        <i class="fa fa-home"></i> Home
+                   </a>
+               </li>
+           </ul>
+       </div>
+    </div>
+</div>
+
+        <div class="container content">
+            <div class="col-md-3"><div class="bs-sidebar hidden-print affix" role="complementary" data-spy="affix" data-offset-top="120">
+    <!-- Expanded navigation -->
+    <div class="navbar-collapse collapse">
+
+        <!-- Main navigation -->
+        <ul class="nav bs-sidenav">
+        
+        
+            <li class="main "><a href="../..">Home</a></li>
+            
+        
+        
+        
+            <li class="main "><a href="../../installation/">Installation</a></li>
+            
+        
+        
+        
+            <li class="main "><a href="../../localization/">Localization</a></li>
+            
+        
+        
+        
+            <li class="main "><a href="../../performance/">Performance & Speed</a></li>
+            
+        
+        
+        
+            <li class="main "><a href="../../security/">Security</a></li>
+            
+        
+        
+        
+            <li class="main "><a href="../../about/">About</a></li>
+            
+        
+        
+        
+            <li class="main active"><a href="">Developers</a></li>
+
+            
+                <li><a href="./">&nbsp;&nbsp;&nbsp;Getting Started</a></li>
+            
+        
+        
+        </ul>
+
+        <!-- Search, Navigation and Repo links -->
+        <ul class="nav navbar-nav navbar-right">
+            
+        </ul>
+    </div>
+</div></div>
+            <div class="col-md-9" role="main">
+
+<h1 id="developers">Developers</h1>
+<h2 id="how-to-setup-prudios-development-environment">How to setup Prudio's development environment</h2>
+<p>This document is divided into <strong>3 applications</strong> and is intended for developers who what to improve <code>Prudio</code> using the <a href="https://assembly.com/prudio">Àssembly platform</a>. First we need to setup <code>prudio-app</code>, this repository is main backend of the project. The next step is to integrate the <code>prudio-chat</code> repo (the frontend widget which the users include into their websites) and finally take a look into the <code>prudio-socket</code>.</p>
+<p>The final result should be something like this:</p>
+<p><img alt="prudio-devenv1.png" src="../img/prudio-architecture.png" /></p>
+<p>For this guide we expect you have the following software installed:</p>
+<ul>
+<li><a href="https://nodejs.org/">Node.js and npm</a></li>
+<li><a href="https://www.mongodb.org/">MongoDB</a></li>
+<li><a href="https://github.com/creationix/nvm">NVM (optional)</a></li>
+<li><a href="http://bower.io/">Bower</a></li>
+<li><a href="http://gulpjs.com/">Gulp</a> (Prudio-app)</li>
+<li><a href="http://gruntjs.com/">Grunt</a> (Prudio-chat)</li>
+<li><a href="https://www.npmjs.com/package/foreman">Foreman</a> (Prudio-chat)</li>
+</ul>
+<p>If you already have <code>nodejs</code> and <code>npm</code> installed, installing bower and gulp is just 2 commands:</p>
+<pre><code class="bash">$ sudo npm install -g bower
+</code></pre>
+
+<p><strong>then</strong></p>
+<pre><code class="bash">$ sudo npm install -g gulp
+</code></pre>
+
+<p><strong>then</strong></p>
+<pre><code class="bash">$ sudo npm install -g grunt-cli
+</code></pre>
+
+<p><strong>then</strong></p>
+<pre><code class="bash">$ sudo npm install -g foreman
+</code></pre>
+
+<p><strong>and</strong></p>
+<p>In this last step, if you are in a ubuntu machine you will need to install the package <code>nodejs-legacy</code> first.</p>
+<pre><code class="bash">$ sudo npm install -g strongloop
+</code></pre>
+
+<p>After installing the above requirements, we can start setting up our development environment.</p>
+<p>(optional) If you want to use nvm (whatever the reason) the following command will let you install and use different node versions (in this case <code>0.12.4</code>):</p>
+<pre><code class="bash">$ nvm install 0.12.4 &amp;&amp; nvm use 0.12.4
+</code></pre>
+
+<h1 id="prudio-app">Prudio-app</h1>
+<p>Now to setup this base repo you will need to fork it. Then clone it:</p>
+<pre><code class="bash">$ git clone git@github.com:YOUR-USER/prudio-app.git
+</code></pre>
+
+<p>After moving on lets add the original repository as a remote, so we can easily keep ours updated:</p>
+<pre><code class="bash">$ git remove add upstream git@github.com:asm-products/prudio-app.git
+</code></pre>
+
+<p>Now lets install the dependencies of the project:</p>
+<pre><code class="bash">$ npm install
+</code></pre>
+
+<p>At this moment we are able to run the website (but we are not finished).</p>
+<pre><code class="bash">$ slc run
+</code></pre>
+
+<p>And you should be able to visit:</p>
+<ul>
+<li>The API explorer: <code>http://localhost:3000/explorer/</code></li>
+<li>The project dashboard: <code>http://localhost:3000/</code></li>
+</ul>
+<p>At this stage it is important to refer that you will need to run <code>gulp build</code> every time you make any changes to the angular.js code (frontend). If you want to do this automatically every-time you save a file, you can use: <code>gulp livereload</code>.</p>
+<p>If you look at the console output you will notice that the line <em>Invalid access token</em> is often being printed. This means the environment variables are not set. We will need at least one slack id and secret to make the dev environment fully functional.</p>
+<p>To get the needed slack codes for your dev environment go to: <code>https://api.slack.com/</code> and create a new app. The only thing you should guarantee is that there is a: <code>http://localhost:3000/auth/slack</code> in the Redirect URI(s).</p>
+<p>Those codes should be be loaded to the environment variables <strong>SLACK_CLIENT_ID</strong> and <strong>SLACK_CLIENT_SECRET</strong>. Like this:</p>
+<pre><code class="bash">$ export SLACK_CLIENT_ID=XXX
+$ export SLACK_CLIENT_SECRET=YYY
+$ export SLACK_REDIRECT_URI=http://localhost:3000/auth/slack
+</code></pre>
+
+<p>We are done with this repository.</p>
+<h1 id="prudio-chat">Prudio-chat</h1>
+<p>Now we will setup the chat repository, which contains the code for the frontend widget that will be placed in the users websites and will connect to prudio's backend.</p>
+<p>First fork and clone the repository to your local machine:</p>
+<pre><code class="bash">$ git clone git@github.com:YOUR-USER/prudio-chat.git
+</code></pre>
+
+<p>After moving on lets add the original repository as a remote, so we can easily keep ours updated:</p>
+<pre><code class="bash">$ git remove add upstream https://github.com/asm-products/prudio-chat
+</code></pre>
+
+<p>then lets install the required dependencies:</p>
+<pre><code class="bash">$ npm install
+</code></pre>
+
+<p>then lets build the current project</p>
+<pre><code class="bash">$ grunt build
+</code></pre>
+
+<p>Now we need to set our node environment to <code>local</code> and tell the app where is the mongo server, so the correct settings can be applied:</p>
+<pre><code class="bash">$ export NODE_ENV=local
+$ export MONGOLAB_URI=mongodb://localhost:27017/
+$ export PORT=4000
+</code></pre>
+
+<p>then just launch a page with the client</p>
+<pre><code class="bash">$ nf start
+</code></pre>
+
+<p>at the moment you will need to manually modifify the line</p>
+<pre><code class="html">&lt;script src=&quot;/client.local.js?appid=CHANGE-FOR-YOUR-OWN-APPID&quot; async&gt;&lt;/script&gt;
+</code></pre>
+
+<p>in <code>index.html</code> to use the <code>appid</code>'s you create in prudio's dashboard, but it will change soon.</p>
+<p>At this point this repo is ready, just visit <code>http://localhost:4000/client-html</code> and you should see the widget.</p>
+<h1 id="prudio-socket">Prudio-socket</h1>
+<p>The final step in the process of setting up our development environment is to add the component that will connect to slack. Like the other repositories you will need to fork, clone and add an upstream remote.</p>
+<pre><code class="bash">$ git clone git@github.com:YOUR-USER/prudio-socket.git
+$ git remote add upsream git@github.com:asm-products/prudio-socket.git
+</code></pre>
+
+<p>Now lets install the dependencies</p>
+<pre><code class="bash">$ npm install
+</code></pre>
+
+<p>The code is ready, but we need a few more tweaks. First lets add some environment variables:</p>
+<pre><code class="bash">$ export MONGOLAB_URI=mongodb://localhost:27017/
+$ export SERVER=LOCAL
+</code></pre>
+
+<p>Now add the information about the sockets server to the database:</p>
+<pre><code class="bash">$ mongo
+</code></pre>
+
+<pre><code class="json">db.Servers.insert({
+    &quot;active&quot; : true,
+    &quot;name&quot; : &quot;prudio-local&quot;,
+    &quot;server&quot; : &quot;LOCAL&quot;,
+    &quot;address&quot; : &quot;http://localhost&quot;,
+    &quot;port&quot; : 5000
+})
+</code></pre>
+
+<p>And we should be able to run it:</p>
+<pre><code class="bash">$ nf start
+</code></pre>
+
+<p>At this moment we have 3 servers running and you should be able to use everything without issues.</p></div>
+        </div>
+
+        
+
+        <div class="footer">
+            <div class="container">
+                <div class="col-md-6">
+                    Copyright <i class="fa fa-copyright"></i> 2015 <a href="http://www.prud.io/" target="_blank">Prud.io</a>.
+                </div>
+                <div class="col-md-6 text-right">
+                    Prudio is an <img src="../../img/asm.png" alt="Assembly" style="height: 10px; margin: -3px 3px 0 3px" /> <a href="http://www.assembly.com/prudio" target="_blank">Assembly</a> product.
+                </div>
+                <div class="col-md-12">
+                    Caught a mistake or want to contribute to the documentation? <a href="https://github.com/asm-products/prudio-docs" target="_blank">Fork this site on Github</a>.
+            </div>
+        </div>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script src="../../js/base.js"></script>
+    </body>
+</html>
