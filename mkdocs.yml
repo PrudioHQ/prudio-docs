@@ -7,6 +7,7 @@ pages:
 - [performance.md, Performance & Speed]
 - [security.md, Security]
 - ['about.md', About]
+- [developers/getting_started.md, "Developers", "Getting Started" ]
 
 theme_dir: prudio
 favicon: img/favicon.ico
