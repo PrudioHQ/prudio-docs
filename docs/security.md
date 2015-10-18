@@ -16,4 +16,4 @@ Submit your finding to hello@prud.io
 * A step-by-step guide to reproduce the issue
 * How to identify you for attribution on this page.
 
-We do not offer money rewards yet but we can offer you an equivalent in app coins from [Assembly.com](http://assembly.com/prudio).
+We do not offer money rewards yet. Sorry.

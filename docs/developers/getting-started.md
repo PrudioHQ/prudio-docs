@@ -2,7 +2,7 @@
 
 ##How to setup Prudio's development environment
 
-This document is divided into **3 applications** and is intended for developers who what to improve `Prudio` using the [Àssembly platform](https://assembly.com/prudio). First we need to setup `prudio-app`, this repository is main backend of the project. The next step is to integrate the `prudio-chat` repo (the frontend widget which the users include into their websites) and finally take a look into the `prudio-socket`.
+This document is divided into **3 applications** and is intended for developers who what to improve `Prudio`. First we need to setup `prudio-app`, this repository is main backend of the project. The next step is to integrate the `prudio-chat` repo (the frontend widget which the users include into their websites) and finally take a look into the `prudio-socket`.
 
 The final result should be something like this:
 
@@ -65,7 +65,7 @@ $ git clone git@github.com:YOUR-USER/prudio-app.git
 After moving on lets add the original repository as a remote, so we can easily keep ours updated:
 
 ```bash
-$ git remove add upstream git@github.com:asm-products/prudio-app.git
+$ git remove add upstream git@github.com:PrudioHQ/prudio-app.git
 ```
 
 Now lets install the dependencies of the project:
@@ -113,7 +113,7 @@ $ git clone git@github.com:YOUR-USER/prudio-chat.git
 After moving on lets add the original repository as a remote, so we can easily keep ours updated:
 
 ```bash
-$ git remove add upstream https://github.com/asm-products/prudio-chat
+$ git remove add upstream https://github.com/PrudioHQ/prudio-chat
 ```
 
 then lets install the required dependencies:
@@ -158,7 +158,7 @@ The final step in the process of setting up our development environment is to ad
 
 ```bash
 $ git clone git@github.com:YOUR-USER/prudio-socket.git
-$ git remote add upsream git@github.com:asm-products/prudio-socket.git
+$ git remote add upsream git@github.com:PrudioHQ/prudio-socket.git
 ```
 
 Now lets install the dependencies
