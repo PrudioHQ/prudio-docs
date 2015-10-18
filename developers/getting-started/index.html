@@ -122,7 +122,7 @@
 
 <h1 id="developers">Developers</h1>
 <h2 id="how-to-setup-prudios-development-environment">How to setup Prudio's development environment</h2>
-<p>This document is divided into <strong>3 applications</strong> and is intended for developers who what to improve <code>Prudio</code> using the <a href="https://assembly.com/prudio">Àssembly platform</a>. First we need to setup <code>prudio-app</code>, this repository is main backend of the project. The next step is to integrate the <code>prudio-chat</code> repo (the frontend widget which the users include into their websites) and finally take a look into the <code>prudio-socket</code>.</p>
+<p>This document is divided into <strong>3 applications</strong> and is intended for developers who what to improve <code>Prudio</code>. First we need to setup <code>prudio-app</code>, this repository is main backend of the project. The next step is to integrate the <code>prudio-chat</code> repo (the frontend widget which the users include into their websites) and finally take a look into the <code>prudio-socket</code>.</p>
 <p>The final result should be something like this:</p>
 <p><img alt="prudio-devenv1.png" src="../img/prudio-architecture.png" /></p>
 <p>For this guide we expect you have the following software installed:</p>
@@ -167,7 +167,7 @@
 </code></pre>
 
 <p>After moving on lets add the original repository as a remote, so we can easily keep ours updated:</p>
-<pre><code class="bash">$ git remove add upstream git@github.com:asm-products/prudio-app.git
+<pre><code class="bash">$ git remove add upstream git@github.com:PrudioHQ/prudio-app.git
 </code></pre>
 
 <p>Now lets install the dependencies of the project:</p>
@@ -200,7 +200,7 @@ $ export SLACK_REDIRECT_URI=http://localhost:3000/auth/slack
 </code></pre>
 
 <p>After moving on lets add the original repository as a remote, so we can easily keep ours updated:</p>
-<pre><code class="bash">$ git remove add upstream https://github.com/asm-products/prudio-chat
+<pre><code class="bash">$ git remove add upstream https://github.com/PrudioHQ/prudio-chat
 </code></pre>
 
 <p>then lets install the required dependencies:</p>
@@ -230,7 +230,7 @@ $ export PORT=4000
 <h1 id="prudio-socket">Prudio-socket</h1>
 <p>The final step in the process of setting up our development environment is to add the component that will connect to slack. Like the other repositories you will need to fork, clone and add an upstream remote.</p>
 <pre><code class="bash">$ git clone git@github.com:YOUR-USER/prudio-socket.git
-$ git remote add upsream git@github.com:asm-products/prudio-socket.git
+$ git remote add upsream git@github.com:PrudioHQ/prudio-socket.git
 </code></pre>
 
 <p>Now lets install the dependencies</p>
@@ -270,10 +270,10 @@ $ export SERVER=LOCAL
                     Copyright <i class="fa fa-copyright"></i> 2015 <a href="http://www.prud.io/" target="_blank">Prud.io</a>.
                 </div>
                 <div class="col-md-6 text-right">
-                    Prudio is an <img src="../../img/asm.png" alt="Assembly" style="height: 10px; margin: -3px 3px 0 3px" /> <a href="http://www.assembly.com/prudio" target="_blank">Assembly</a> product.
+                    Prud.io it is not created by or affiliated with <a href="https://slack.com/" target="_blank">Slack Technologies, Inc</a>.
                 </div>
                 <div class="col-md-12">
-                    Caught a mistake or want to contribute to the documentation? <a href="https://github.com/asm-products/prudio-docs" target="_blank">Fork this site on Github</a>.
+                    Caught a mistake or want to contribute to the documentation? <a href="https://github.com/PrudioHQ/prudio-docs" target="_blank">Fork this site on Github</a>.
             </div>
         </div>
 
