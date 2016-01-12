@@ -8,7 +8,7 @@ We also sign all the requests with a *signature* composed of a public and privat
 
 ## Found an issue?
 
-Submit your finding to hello@prud.io
+Submit your finding to hello@prudio.com
 
 **Please include:**
 

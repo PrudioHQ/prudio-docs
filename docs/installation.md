@@ -2,7 +2,7 @@
 
 ## Install
 
-To install the code snippet please refer to the *Prudio* [administration](https://app.prud.io).
+To install the code snippet please refer to the *Prudio* [administration](https://app.prudio.com).
 
 There you can create and find your applications.
 
@@ -11,7 +11,7 @@ Copy the following code and paste it inside your `<body>` tag.
 Simple example:
 
 ```html
-<script src="https://static.prud.io/client.js?appid=YOURAPPID" async></script>
+<script src="https://widget.prudio.com/client.js?appid=YOURAPPID" async></script>
 ```
 
 Don't forget to change the `YOURAPPID` for your own code.
@@ -28,7 +28,7 @@ to ask for the name and e-mail again.
 Check this example:
 
 ```html
-<script src="https://static.prud.io/client.js?appid=YOURAPPID" async></script>
+<script src="https://widget.prudio.com/client.js?appid=YOURAPPID" async></script>
 <script>
 
     window._PrudioSettings = {
@@ -42,7 +42,7 @@ Check this example:
 Simple example using **PHP**:
 
 ```
-<script src="https://static.prud.io/client.js?appid=YOURAPPID" async></script>
+<script src="https://widget.prudio.com/client.js?appid=YOURAPPID" async></script>
 <script>
 
     window._PrudioSettings = {
@@ -58,7 +58,7 @@ Simple example using **PHP**:
 Prudio comes with a good default configuration that meets the needs of many of its deployments. However we know that each use case has its own special demands, this way we give you the chance to configure and adapt the widget to your website look and feel. Bellow are some of the settings available:
 
 ```html
-<script src="https://static.prud.io/client.js?appid=YOURAPPID" async></script>
+<script src="https://widget.prudio.com/client.js?appid=YOURAPPID" async></script>
 <script>
 
     window._PrudioSettings = {

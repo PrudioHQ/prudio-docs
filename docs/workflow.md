@@ -1,3 +1,3 @@
-# Slack + Prud.io workflow
+# Slack + Prudio.com workflow
 
 TODO
