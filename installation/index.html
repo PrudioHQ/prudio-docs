@@ -85,9 +85,9 @@
                 
                 <li><a class="toc" href="#install">Install</a></li>
                 
-                <li><a class="toc" href="#options">Options</a></li>
-                
                 <li><a class="toc" href="#personalize-your-widget">Personalize your widget</a></li>
+                
+                <li><a class="toc" href="#identify-your-users">Identify your users</a></li>
                 
                 <li><a class="toc" href="#language">Language</a></li>
                 
@@ -143,8 +143,33 @@
 </code></pre>
 
 <p>Don't forget to change the <code>YOURAPPID</code> for your own code.</p>
-<h2 id="options">Options</h2>
-<h3 id="identify-your-users">Identify your users</h3>
+<h2 id="personalize-your-widget">Personalize your widget</h2>
+<p>Prudio comes with a good default configuration that meets the needs of many of its deployments. However we know that each use case has its own special demands, this way we give you the chance to configure and adapt the widget to your website look and feel. Bellow are some of the settings available:</p>
+<pre><code class="html">&lt;script src=&quot;https://widget.prudio.com/client.js?appid=YOURAPPID&quot; async&gt;&lt;/script&gt;
+&lt;script&gt;
+
+    window._PrudioSettings = {
+        title: '', // Title of the window (on the top)
+        icon: '', // Check the available icon bellow (default: prd-icon-btn-help)
+        buttonColor: '', // Color of the default button (default: rgba(0, 114, 176, 0.9))
+        borderColor: '', // Color of the button border (default: rgba(0, 114, 176, 1))
+        iconColor: '', // Color of the icon (default: white)
+        buttonSelector: '' // the jQuery like selector .class or #id
+    };
+
+&lt;/script&gt;
+</code></pre>
+
+<p>As you can see in the example above, you can change the displayed text (<code>title</code>), the icon of the default button (see bellow the available icons) and the colors (<code>buttonColor</code>, <code>borderColor</code>, <code>iconColor</code>). If it is not enough, you can also specify an element in your own page to trigger the Prudio Widget (<code>buttonSelector</code>) instead of using the default button.</p>
+<p><strong>Available icons:</strong></p>
+<ul>
+<li>prd-icon-btn-help (<em>default</em>)</li>
+<li>prd-icon-btn-bubble</li>
+<li>prd-icon-btn-chat</li>
+<li>prd-icon-btn-prudio</li>
+<li>prd-icon-btn-chats</li>
+</ul>
+<h2 id="identify-your-users">Identify your users</h2>
 <p>Use the configurations to give a brief insight of your users.</p>
 <p>For example, if your user is already authenticated in you web app you don't need
 to ask for the name and e-mail again.</p>
@@ -172,32 +197,6 @@ to ask for the name and e-mail again.</p>
 &lt;/script&gt;
 </code></pre>
 
-<h2 id="personalize-your-widget">Personalize your widget</h2>
-<p>Prudio comes with a good default configuration that meets the needs of many of its deployments. However we know that each use case has its own special demands, this way we give you the chance to configure and adapt the widget to your website look and feel. Bellow are some of the settings available:</p>
-<pre><code class="html">&lt;script src=&quot;https://widget.prudio.com/client.js?appid=YOURAPPID&quot; async&gt;&lt;/script&gt;
-&lt;script&gt;
-
-    window._PrudioSettings = {
-        title: '', // Title of the window (on the top)
-        icon: '', // Check the available icon bellow (default: prd-icon-btn-help)
-        buttonColor: '', // Color of the default button (default: rgba(0, 114, 176, 0.9))
-        borderColor: '', // Color of the button border (default: rgba(0, 114, 176, 1))
-        iconColor: '', // Color of the icon (default: white)
-        buttonSelector: '' // the jQuery like selector .class or #id
-    };
-
-&lt;/script&gt;
-</code></pre>
-
-<p>As you can see in the example above, you can change the displayed text (<code>title</code>), the icon of the default button (see bellow the available icons) and the colors (<code>buttonColor</code>, <code>borderColor</code>, <code>iconColor</code>). If it is not enough, you can also specify an element in your own page to trigger the Prudio Widget (<code>buttonSelector</code>) instead of using the default button.</p>
-<p><strong>Available icons:</strong></p>
-<ul>
-<li>prd-icon-btn-help (<em>default</em>)</li>
-<li>prd-icon-btn-bubble</li>
-<li>prd-icon-btn-chat</li>
-<li>prd-icon-btn-prudio</li>
-<li>prd-icon-btn-chats</li>
-</ul>
 <h2 id="language">Language</h2>
 <p>Please check the <a href="../localization/">documentation on localization</a>.</p></div>
         </div>
