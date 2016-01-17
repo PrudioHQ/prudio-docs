@@ -98,6 +98,8 @@
             
                 <li><a class="toc" href="#security">Security</a></li>
                 
+                <li><a class="toc" href="#slack-scopes">Slack Scopes</a></li>
+                
                 <li><a class="toc" href="#found-an-issue">Found an issue?</a></li>
                 
             
@@ -131,6 +133,25 @@
 <p>We take security very seriously. That's why we put an extra effort in encrypting all connections.</p>
 <p>All connections are made over HTTPS (Secure HTTP) and WSS (Secure WebSocket).</p>
 <p>We also sign all the requests with a <em>signature</em> composed of a public and private key so you can ensure the request was made from Prudio servers.</p>
+<p>Our infrastructure is hosted at <a href="http://heroku.com/">Heroku</a> &amp; <a href="http://aws.amazon.com/">Amazon Web Services</a>. We also use <a href="https://www.keycdn.com/?a=5066">KeyCDN</a> as our CDN provider.</p>
+<h2 id="slack-scopes">Slack Scopes</h2>
+<p>In order to function properly we needs to access some of your team private information.</p>
+<h3 id="here-are-the-scopes-we-need-to-access">Here are the scopes we need to access:</h3>
+<ul>
+<li>Confirm identity.</li>
+<li>Access and modify information about your public channels.</li>
+<li>Access information about your team.</li>
+<li>Send messages as "YOUR TEAM".</li>
+<li>Access content in your public channels. (1)</li>
+<li>Access your team's profile information. (2)</li>
+<li>Upload and modify files as you. (3)</li>
+</ul>
+<h3 id="these-scopes-are-needed-for">These scopes are needed for:</h3>
+<ol>
+<li>Chats sessions history retrieval.</li>
+<li>Access your team members name, e-mail and avatar.</li>
+<li>Allow us to upload files in chat sessions (bots have no access to uploads).</li>
+</ol>
 <h2 id="found-an-issue">Found an issue?</h2>
 <p>Submit your finding to hello@prudio.com</p>
 <p><strong>Please include:</strong></p>
