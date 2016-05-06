@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>Security - Prudio Documentation</title>
+	<title>Slash Command <span class='label label-success'>NEW</span> - Prudio Documentation</title>
 
         <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet" type="text/css">
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
@@ -83,7 +83,14 @@
         
         
         
-            <li class="main "><a href="../slash-command/">Slash Command <span class='label label-success'>NEW</span></a></li>
+            <li class="main active"><a href="./">Slash Command <span class='label label-success'>NEW</span></a></li>
+            
+            
+                <li><a class="toc" href="#prudio-slash-command">/prudio slash command</a></li>
+                
+                <li><a class="toc" href="#options">Options</a></li>
+                
+            
             
         
         
@@ -98,16 +105,7 @@
         
         
         
-            <li class="main active"><a href="./">Security</a></li>
-            
-            
-                <li><a class="toc" href="#security">Security</a></li>
-                
-                <li><a class="toc" href="#slack-scopes">Slack Scopes</a></li>
-                
-                <li><a class="toc" href="#found-an-issue">Found an issue?</a></li>
-                
-            
+            <li class="main "><a href="../security/">Security</a></li>
             
         
         
@@ -134,38 +132,25 @@
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="security">Security</h1>
-<p>We take security very seriously. That's why we put an extra effort in encrypting all connections.</p>
-<p>All connections are made over HTTPS (Secure HTTP) and WSS (Secure WebSocket).</p>
-<p>We also sign all the requests with a <em>signature</em> composed of a public and private key so you can ensure the request was made from Prudio servers.</p>
-<p>Our infrastructure is hosted at <a href="http://heroku.com/">Heroku</a> &amp; <a href="http://aws.amazon.com/">Amazon Web Services</a>. We also use <a href="https://www.keycdn.com/?a=5066">KeyCDN</a> as our CDN provider.</p>
-<h2 id="slack-scopes">Slack Scopes</h2>
-<p>In order to function properly we needs to access some of your team private information.</p>
-<h3 id="here-are-the-scopes-we-need-to-access">Here are the scopes we need to access:</h3>
-<ul>
-<li>Confirm identity.</li>
-<li>Access and modify information about your public channels.</li>
-<li>Access information about your team.</li>
-<li>Send messages as "YOUR TEAM".</li>
-<li>Access content in your public channels. (1)</li>
-<li>Access your team's profile information. (2)</li>
-<li>Upload and modify files as you. (3)</li>
-</ul>
-<h3 id="these-scopes-are-needed-for">These scopes are needed for:</h3>
-<ol>
-<li>Chats sessions history retrieval.</li>
-<li>Access your team members name, e-mail and avatar.</li>
-<li>Allow us to upload files in chat sessions (bots have no access to uploads).</li>
-</ol>
-<h2 id="found-an-issue">Found an issue?</h2>
-<p>Submit your finding to hello@prudio.com</p>
-<p><strong>Please include:</strong></p>
-<ul>
-<li>A summary of the problem you found</li>
-<li>A step-by-step guide to reproduce the issue</li>
-<li>How to identify you for attribution on this page.</li>
-</ul>
-<p>We do not offer money rewards yet. Sorry.</p></div>
+<h1 id="prudio-slash-command"><code>/prudio</code> slash command</h1>
+<p>You can now use the new command <code>/prudio</code> to get information directly from the Slack.</p>
+<h2 id="options">Options</h2>
+<h3 id="prudio-list"><code>/prudio list</code></h3>
+<p>To list all of the Widget installed in your team.</p>
+<p>This list will give you a short overview of your Widgets including the number that identifies your Widget (1, 2, 3, etc).</p>
+<h3 id="prudio-on-number"><code>/prudio on [Number]</code></h3>
+<p>To turn <strong>ON</strong> the Widget identified by the number [Number].</p>
+<h3 id="prudio-off-number"><code>/prudio off [Number]</code></h3>
+<p>Same has above but to turn off. Turn <strong>OFF</strong> the Widget identified by the number [Number].</p>
+<h3 id="mini-faq">mini-FAQ</h3>
+<p><strong>Q:</strong> <em>I cannot see the <code>/prudio</code> command in my account</em></p>
+<p><strong>A:</strong> No problem. Just login to you account in <a href="https://app.prudio.com">app.prudio.com</a>.</p>
+<hr />
+<p><strong>Q:</strong> <em>What does <strong>ON/OFF</strong> means to my widget?</em></p>
+<p><strong>A:</strong> <strong>ON</strong>: the icon will show up in your page. <strong>OFF</strong>: the icon will not be visible.</p>
+<hr />
+<p><strong>Q:</strong> <em>Can I automate this to turn on and off during business hours?</em></p>
+<p><strong>A:</strong> Not yet. We are working on a scheduler and will release it ASAP :)</p></div>
         </div>
 
         
