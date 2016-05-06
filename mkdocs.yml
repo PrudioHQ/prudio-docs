@@ -3,6 +3,7 @@ site_name: Prudio Documentation
 pages:
 - [index.md, Home]
 - [installation.md, Installation]
+- [slash-command.md, "Slash Command <span class='label label-success'>NEW</span>" ]
 - [localization.md, Localization]
 - [performance.md, Performance & Speed]
 - [security.md, Security]
