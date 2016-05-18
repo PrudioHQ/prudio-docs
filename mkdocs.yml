@@ -4,10 +4,11 @@ pages:
 - [index.md, Home]
 - [installation.md, Installation]
 - [slash-command.md, "Slash Command <span class='label label-success'>NEW</span>" ]
+- [integrations.md, "Integrations <span class='label label-success'>BETA</span>" ]
 - [localization.md, Localization]
 - [performance.md, Performance & Speed]
 - [security.md, Security]
-- ['about.md', About]
+- [about.md, About]
 - [developers/getting-started.md, "Developers", "Getting Started" ]
 
 theme_dir: prudio
