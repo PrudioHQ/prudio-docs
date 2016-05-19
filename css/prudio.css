@@ -55,6 +55,11 @@ p {
     color: #BBB;
 }
 
+#search {
+    margin-top: 16px;
+    margin-left: 26px;
+}
+
 .toc {
     margin-left: 12px;
 }
